@@ -24,7 +24,7 @@
       transparent 4px
     ),
     linear-gradient(to bottom, #e7e7e7 0.01%, #1a1a1a 100%);
-  --block-width: clamp( 375px, 100%, 696px);
+  --block-width: clamp( 375px, 100%, 700px);
   --border-color: #000;
   --text-stroke-color: rgba(255, 255, 255, 0.5);
 }
