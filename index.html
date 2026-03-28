@@ -1,18 +1,107 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="ru">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Закрывающий тег</title>
-    <link rel="stylesheet" href="./fonts/fonts.css" />
-    <link rel="stylesheet" href="./styles/variables.css" />
-    <link rel="stylesheet" href="./styles/globals.css" />
-    <link rel="stylesheet" href="./styles/style.css" />
-    <link rel="stylesheet" href="./styles/animations.css" />
-  </head>
-  <body class="page">
-    <header class="header"></header>
-    <main></main>
-    <script src="./scripts/like.js"></script>
-  </body>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Закрывающий тег</title>
+
+  <link rel="icon" href="./images/favicon.ico" sizes="any">
+  <link rel="icon" href="./images/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="./images/favicon.png">
+
+  <link rel="stylesheet" href="./fonts/fonts.css" />
+  <link rel="stylesheet" href="./styles/variables.css" />
+  <link rel="stylesheet" href="./styles/globals.css" />
+  <link rel="stylesheet" href="./styles/style.css" />
+  <link rel="stylesheet" href="./styles/animations.css" />
+</head>
+
+<body class="page">
+  <header class="header block-size">
+    <div class="header__logo">&lt;/HTML&gt;</div>
+    <h1 class="header__title">Закрывающий тег</h1>
+  </header>
+  <main class="block-size">
+    <div class="cards">
+      <article class="card ">
+        <h2 class="card__title">
+          Фритрек и нулевой спринт: Подготовка к работе
+        </h2>
+        <div class="card__picture">
+          <img class="card__image" src="./images/Сноукайтинг - 640x446.jpg" alt="" />
+          <span class="watermark">&lt;/HTML&gt;</span>
+        </div>
+        <div class="card__content">
+          <div class="card__content-text">
+            <p>Это было самое начало пути. На этом этапе важно было проникнуться
+              основами и настроиться на учёбу. И, возможно, подумать, как новые
+              знания могут повлиять на ваше будущее.</p>
+            <p>Место для ваших воспоминаний о начале обучения.
+            </p>
+          </div>
+          <div class="card__content-buttons">
+            <button class="card__icon-button common-button">
+              <svg class="like-icon" width="39" height="36" viewBox="0 0 39 36" fill="none"
+                xmlns="http://www.w3.org/2000/svg">
+                <g clip-path="url(#clip0_1_1574)">
+                  <path
+                    d="M12 6H9V9H12V6ZM15 6H12V9H15V6ZM9 9H6V12H9V9ZM9 12H6V15H9V12ZM9 15H6V18H9V15ZM18 6H15V9H18V6ZM12 18H9V21H12V18ZM15 21H12V24H15V21ZM18 24H15V27H18V24ZM27 6H30V9H27V6ZM24 6H27V9H24V6ZM30 9H33V12H30V9ZM30 12H33V15H30V12ZM30 15H33V18H30V15ZM21 6H24V9H21V6ZM27 18H30V21H27V18ZM24 21H27V24H24V21ZM21 24H24V27H21V24ZM21 27H18V30H21V27ZM21 9H18V12H21V9Z"
+                    fill="black" />
+                  <path
+                    d="M12 9H9V12H12V9ZM15 12H12V15H15V12ZM18 9H15V12H18V9ZM12 15H9V18H12V15ZM15 15H12V18H15V15ZM15 18H12V21H15V18ZM18 12H15V15H18V12ZM18 21H15V24H18V21ZM18 18H15V21H18V18ZM27 9H30V12H27V9ZM24 9H27V12H24V9ZM27 12H30V15H27V12ZM24 12H27V15H24V12ZM21 9H24V12H21V9ZM27 15H30V18H27V15ZM24 15H27V18H24V15ZM24 18H27V21H24V18ZM21 12H24V15H21V12ZM21 21H24V24H21V21ZM21 18H24V21H21V18ZM21 21H18V24H21V21ZM21 24H18V27H21V24Z"
+                    fill="#FF0000" />
+                  <path
+                    d="M18 15H15V18H18V15ZM21 15H24V18H21V15ZM21 15H18V18H21V15ZM21 12H18V15H21V12ZM21 18H18V21H21V18Z"
+                    fill="white" />
+                  <path
+                    d="M36 13H39V16H36V13ZM27 27H30V30H27V27ZM18 33H21V36H18V33ZM9 27H12V30H9V27ZM24 0H27V3H24V0ZM33 3H36V6H33V3ZM3 3H6V6H3V3ZM12 0H15V3H12V0ZM0 13H3V16H0V13Z"
+                    fill="#FF0000" />
+                </g>
+              </svg>
+            </button>
+            <button class="card__like-button common-button">
+              <span class="button__text">Like</span>
+            </button>
+          </div>
+        </div>
+      </article>
+
+      <button class="save__button common-button" onclick="window['save-dialog-id'].showModal()"
+        aria-controls="save-dialog-id">
+        <svg class="save-button__icon">
+          <use href="./svg/floppy.svg#disk-icon" />
+        </svg>
+        <span class="button__text">Сохранить на память</span>
+      </button>
+    </div>
+  </main>
+  <!-- Один раз подключаете спрайт -->
+  <!-- <svg style="display: none;">
+    <symbol id="save-button" viewBox="0 0 24 24">
+      <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/>
+    </symbol>
+  </svg> -->
+  <dialog id="save-dialog-id">
+    <div class="save-dialog">
+      <div class="save-dialog__content">
+        <svg class="save-button__icon">
+          <use href="./svg/floppy.svg#disk-icon" />
+        </svg>
+        <p class="save-dialog__text">Вставьте дискету, чтобы продолжить</p>
+      </div>
+      <button class="save-dialog__button common-button" onclick="window['save-dialog-id'].close();">
+        <span class="button__text">ок</span>
+      </button>
+      <!-- <form method="dialog">
+        <button class="save-dialog__button common-button">
+          <span class="button__text">ок</span>
+        </button>
+      </form> -->
+    </div>
+  </dialog>
+  <script src="./scripts/like.js"></script>
+</body>
+<h1>&nbsp;</h1>
+
 </html>
