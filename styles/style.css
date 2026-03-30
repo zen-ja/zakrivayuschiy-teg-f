@@ -14,10 +14,11 @@
   font-family: var(--main-font);
   font-size: 18px;
   background-image: var(--gradient);
+  background-attachment: fixed;
   background-size: cover;
   min-inline-size: 320px;
   min-block-size: 100dvb;
-  font-variation-settings: "wght" var(--text-font-weight);
+  font-variation-settings: 'wght' var(--text-font-weight);
   display: grid;
   justify-items: center;
 }
@@ -70,13 +71,14 @@
   padding-block: 4px;
   font-weight: var(--title-font-weight);
   font-size: var(--text-font-size);
-  font-variation-settings: "wght" var(--title-font-weight);
+  font-variation-settings: 'wght' var(--title-font-weight);
 }
 
 .card__picture {
   border-top: 2px solid var(--accent-color);
   border-bottom: 2px solid var(--accent-color);
   overflow: hidden;
+  position: relative;
 }
 
 .card__image {
@@ -146,7 +148,7 @@
 }
 
 .animated-button::after {
-  content: "";
+  content: '';
   position: absolute;
   top: 0;
   left: 0;
@@ -176,7 +178,7 @@
 
 dialog {
   padding: 0;
-  margin: auto auto;
+  margin: auto;
   border: none;
 }
 
@@ -189,7 +191,6 @@ dialog {
   padding: 28px;
   font-family: var(--accent-font);
   font-size: 14px;
-  line-height: 90%;
   line-height: 1.5;
 }
 
@@ -250,26 +251,6 @@ dialog::backdrop {
   height: 21px;
 }
 
-.card__picture {
-  position: relative;
-}
-
-.watermark {
-  position: absolute;
-  top: 25px;
-  right: 25px;
-  font-family: var(--accent-font);
-  font-size: 14px;
-  text-shadow:
-    -1px 0 var(--text-stroke-color),
-    0 1px var(--text-stroke-color),
-    1px 0 var(--text-stroke-color),
-    0 -1px var(--text-stroke-color);
-  -webkit-text-stroke: 1px var(--text-stroke-color);
-  mix-blend-mode: hard-light;
-}
-
-
 .filter-saturate {
   filter: saturate(2);
 }
@@ -299,6 +280,7 @@ dialog::backdrop {
 }
 
 /*default*/
+
 .like-icon {
   transform-origin: center;
   width: 32px;
@@ -371,10 +353,26 @@ dialog::backdrop {
   animation: sparks 0.3s 0.3s ease-in;
 }
 
+.watermark {
+  position: absolute;
+  top: 25px;
+  right: 25px;
+  font-family: var(--accent-font);
+  font-size: 14px;
+  text-shadow:
+    -1px 0 var(--text-stroke-color),
+    0 1px var(--text-stroke-color),
+    1px 0 var(--text-stroke-color),
+    0 -1px var(--text-stroke-color);
+  -webkit-text-stroke: 1px var(--text-stroke-color);
+  mix-blend-mode: hard-light;
+}
+
 @supports (
   (text-stroke: 1px var(--text-stroke-color)) or
     (-webkit-text-stroke: 1px var(--text-stroke-color))
 ) {
+
   .watermark {
     text-shadow: none;
     text-stroke: 1px var(--text-stroke-color);
@@ -382,14 +380,13 @@ dialog::backdrop {
 }
 
 @media (width <=375px) {
+
   .header__logo {
     font-size: 49px;
-    /* line-height: 49px; */
   }
 
   .header__title {
     font-size: 14px;
-    /* line-height: 14px; */
     text-transform: uppercase;
   }
 

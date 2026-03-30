@@ -3,9 +3,9 @@
 :root {
   --main-color: #fff;
   --accent-color: #000;
-  --animation-fill-color:  #F00;
+  --animation-fill-color: #f00;
 
-  --text-stroke-color: rgba(255, 255, 255, 0.5);
+  --text-stroke-color: rgb(255 255 255 / 0.5);
   --text-color: var(--main-color);
   --background-color: var(--main-color);
   --contour-color: var(--accent-color);
@@ -18,16 +18,20 @@
   --text-font-weight: 410;
 
   --gradient:
-    repeating-linear-gradient(to right,
+    repeating-linear-gradient(
+      to right,
       #d3d3d3 0,
       #d3d3d3 2px,
       transparent 2px,
-      transparent 4px),
-    repeating-linear-gradient(to bottom,
+      transparent 4px
+    ),
+    repeating-linear-gradient(
+      to bottom,
       #d3d3d3 0,
       #d3d3d3 2px,
       transparent 2px,
-      transparent 4px),
+      transparent 4px
+    ),
     linear-gradient(to bottom, #e7e7e7 0.01%, #1a1a1a 100%);
   --block-width: clamp(375px, 100%, 700px);
 }
