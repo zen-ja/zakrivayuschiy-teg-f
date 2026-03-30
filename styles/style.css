@@ -11,16 +11,15 @@
 */
 
 .page {
+  display: grid;
+  justify-items: center;
   font-family: var(--main-font);
   font-size: 18px;
   background-image: var(--gradient);
   background-attachment: fixed;
-  background-size: cover;
   min-inline-size: 320px;
   min-block-size: 100dvb;
   font-variation-settings: 'wght' var(--text-font-weight);
-  display: grid;
-  justify-items: center;
 }
 
 .block-width {
@@ -34,8 +33,8 @@
   align-items: center;
   gap: 20px;
   margin-block: 98px;
-  padding-block: 130px;
   border: 2px solid var(--accent-color);
+  padding-block: 130px;
   font-family: var(--accent-font);
   background-color: var(--background-color);
 }
@@ -75,19 +74,19 @@
 }
 
 .card__picture {
+  position: relative;
   border-top: 2px solid var(--accent-color);
   border-bottom: 2px solid var(--accent-color);
   overflow: hidden;
-  position: relative;
 }
 
 .card__image {
-  border: none;
-  outline: none;
   display: block;
   width: var(--block-width);
-  aspect-ratio: 1/1;
+  border: none;
   object-fit: cover;
+  outline: none;
+  aspect-ratio: 1/1;
 }
 
 .card__content {
@@ -128,8 +127,8 @@
 }
 
 .card__icon-button {
-  outline: none;
   border: 2px solid transparent;
+  outline: none;
   transition: border 0.3s ease;
 }
 
@@ -138,13 +137,13 @@
 }
 
 .animated-button {
-  transition: box-shadow 0.3s ease;
   position: relative;
+  transition: box-shadow 0.3s ease;
 }
 
 .animated-button:focus {
-  outline: none;
   box-shadow: 2px 2px 0 var(--accent-color);
+  outline: none;
 }
 
 .animated-button::after {
@@ -155,9 +154,9 @@
   width: 100%;
   height: 100%;
   background-color: var(--accent-color);
+  transition: transform 0.5s ease-in-out;
   transform: scaleX(0);
   transform-origin: left top;
-  transition: transform 0.5s ease-in-out;
 }
 
 .animated-button:hover::after {
@@ -171,15 +170,15 @@
 
 .button__text {
   position: relative;
-  mix-blend-mode: difference;
-  color: var(--text-color);
   z-index: 1;
+  color: var(--text-color);
+  mix-blend-mode: difference;
 }
 
 dialog {
-  padding: 0;
   margin: auto;
   border: none;
+  padding: 0;
 }
 
 .save-dialog {
@@ -207,9 +206,9 @@ dialog::backdrop {
 }
 
 .save-button__icon {
+  z-index: 1;
   fill: var(--text-color);
   mix-blend-mode: difference;
-  z-index: 1;
 }
 
 .save-dialog__content .save-button__icon {
@@ -221,12 +220,6 @@ dialog::backdrop {
 .save-dialog__text {
   flex-grow: 1;
   text-transform: uppercase;
-  /* display: -webkit-box;
-  -webkit-line-clamp: 3;
-  -webkit-box-orient: vertical;
-  overflow: hidden;
-  min-height: 50px;
-  word-wrap: break-word; */
 }
 
 .save-dialog__button {
@@ -250,6 +243,8 @@ dialog::backdrop {
   width: 21px;
   height: 21px;
 }
+
+/*fiters*/
 
 .filter-saturate {
   filter: saturate(2);
@@ -279,12 +274,16 @@ dialog::backdrop {
   filter: invert(10%);
 }
 
+.filter-opacity {
+  filter: opacity(0.9);
+}
+
 /*default*/
 
 .like-icon {
-  transform-origin: center;
   width: 32px;
   height: 32px;
+  transform-origin: center;
 }
 
 .contour {
@@ -345,8 +344,8 @@ dialog::backdrop {
 }
 
 .like-icon.is-liked .heart {
-  animation: scale 0.1s 0.3s ease-in;
   transform-origin: center;
+  animation: scale 0.1s 0.3s ease-in;
 }
 
 .like-icon.is-liked .sparks {
