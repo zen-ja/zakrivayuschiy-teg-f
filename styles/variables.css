@@ -12,6 +12,7 @@
 
   --main-font: 'Inter', sans-serif;
   --accent-font: 'PressStart2P', sans-serif;
+  --accent-font-size: 14px;
   --title-font-size: 18px;
   --title-font-weight: 715;
   --text-font-size: 18px;
@@ -33,5 +34,6 @@
       transparent 4px
     ),
     linear-gradient(to bottom, #e7e7e7 0.01%, #1a1a1a 100%);
+
   --block-width: clamp(375px, 100%, 700px);
 }

@@ -15,7 +15,9 @@
   justify-items: center;
   font-family: var(--main-font);
   font-size: 18px;
+  background-color: var(--background-color);
   background-image: var(--gradient);
+  background-size: cover;
   background-attachment: fixed;
   min-inline-size: 320px;
   min-block-size: 100dvb;
@@ -117,7 +119,7 @@
   padding: 0;
   outline: none;
   font-family: var(--accent-font);
-  font-size: 14px;
+  font-size: var(--accent-font-size);
   line-height: 90%;
   background: none;
   background-color: var(--background-color);
@@ -189,7 +191,7 @@ dialog {
   border: 2px solid var(--accent-color);
   padding: 28px;
   font-family: var(--accent-font);
-  font-size: 14px;
+  font-size: var(--accent-font-size);
   line-height: 1.5;
 }
 
@@ -213,8 +215,8 @@ dialog::backdrop {
 
 .save-dialog__content .save-button__icon {
   flex-shrink: 0;
-  width: 40px;
-  height: 40px;
+  max-width: 40px;
+  max-height: 40px;
 }
 
 .save-dialog__text {
@@ -281,8 +283,8 @@ dialog::backdrop {
 /*default*/
 
 .like-icon {
-  width: 32px;
-  height: 32px;
+  min-width: 32px;
+  min-height: 32px;
   transform-origin: center;
 }
 
@@ -357,13 +359,12 @@ dialog::backdrop {
   top: 25px;
   right: 25px;
   font-family: var(--accent-font);
-  font-size: 14px;
+  font-size: var(--accent-font-size);
   text-shadow:
     -1px 0 var(--text-stroke-color),
     0 1px var(--text-stroke-color),
     1px 0 var(--text-stroke-color),
     0 -1px var(--text-stroke-color);
-  -webkit-text-stroke: 1px var(--text-stroke-color);
   mix-blend-mode: hard-light;
 }
 
@@ -374,6 +375,7 @@ dialog::backdrop {
 
   .watermark {
     text-shadow: none;
+    -webkit-text-stroke: 1px var(--text-stroke-color);
     text-stroke: 1px var(--text-stroke-color);
   }
 }
@@ -385,7 +387,7 @@ dialog::backdrop {
   }
 
   .header__title {
-    font-size: 14px;
+    font-size: var(--accent-font-size);
     text-transform: uppercase;
   }
 
