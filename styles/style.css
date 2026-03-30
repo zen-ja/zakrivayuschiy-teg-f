@@ -55,7 +55,7 @@
 .cards {
   display: flex;
   flex-direction: column;
-  gap: 50px;
+  gap: 53px;
   padding-block-end: 100px;
 }
 
@@ -64,7 +64,6 @@
   flex-direction: column;
   border: 2px solid var(--accent-color);
   background-color: var(--background-color);
-  /* width: var(--block-width); */
 }
 
 .card__title {
@@ -110,7 +109,6 @@
   flex-direction: row;
   justify-content: flex-end;
   gap: 8px;
-  padding-bottom: 3px;
 }
 
 .common-button {
@@ -177,6 +175,21 @@
   mix-blend-mode: difference;
 }
 
+.save__button {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin: 0 auto;
+  border: 2px solid var(--accent-color);
+  padding-inline: 19px;
+  padding-block: 13px;
+}
+
+.save__button .save-button__icon {
+  width: 21px;
+  height: 21px;
+}
+
 dialog {
   margin: auto;
   border: none;
@@ -229,21 +242,6 @@ dialog::backdrop {
   padding-inline: 22px;
   padding-block: 10px;
   text-transform: uppercase;
-}
-
-.save__button {
-  display: flex;
-  align-items: center;
-  gap: 8px;
-  margin: 0 auto;
-  border: 2px solid var(--accent-color);
-  padding-inline: 19px;
-  padding-block: 15px;
-}
-
-.save__button .save-button__icon {
-  width: 21px;
-  height: 21px;
 }
 
 /*fiters*/
