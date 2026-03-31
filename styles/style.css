@@ -185,6 +185,12 @@
   padding-block: 13px;
 }
 
+.save-button__icon {
+  z-index: 1;
+  fill: var(--text-color);
+  mix-blend-mode: difference;
+}
+
 .save__button .save-button__icon {
   width: 21px;
   height: 21px;
@@ -218,12 +224,6 @@ dialog::backdrop {
   justify-content: center;
   align-items: center;
   gap: 20px;
-}
-
-.save-button__icon {
-  z-index: 1;
-  fill: var(--text-color);
-  mix-blend-mode: difference;
 }
 
 .save-dialog__content .save-button__icon {
