@@ -15,7 +15,7 @@
 
 .page {
   margin: 0 auto;
-  display: grid;
+  /* display: grid; */
   justify-content: center;
   font-family: var(--main-font, 'Arial, sans-serif');
   font-size: 18px;
@@ -207,22 +207,28 @@ dialog {
   margin: auto;
   border: none;
   padding: 0;
+  position: fixed;
+  inset: 0;
+}
+
+body:has(dialog[open]){
+  overflow: hidden;
+}
+
+dialog[open]::backdrop {
+  background-color: rgb(0 0 0 / 0.75);
 }
 
 .save-dialog {
   display: flex;
   flex-direction: column;
   gap: 30px;
-  width: 353px;
-  border:  var(--border-width, 2px) solid var(--accent-color, #000);
-  padding: 28px;
+  max-width: 353px;
+  border: var(--border-width, 2px) solid var(--accent-color, #000);
+  padding: 30px;
   font-family: var(--accent-font, 'Arial, sans-serif');
   font-size: var(--accent-font-size, 14px);
   line-height: 1.5;
-}
-
-dialog::backdrop {
-  background-color: rgb(0 0 0 / 0.75);
 }
 
 .save-dialog__content {
@@ -245,7 +251,7 @@ dialog::backdrop {
 }
 
 .save-dialog__button {
-  border:  var(--border-width, 2px) solid var(--accent-color, #000);
+  overflow: hidden;  border: var(--border-width, 2px) solid var(--accent-color, #000);
   padding-inline: 22px;
   padding-block: 10px;
   text-transform: uppercase;
@@ -377,7 +383,6 @@ dialog::backdrop {
   (text-stroke: 1px var(--text-stroke-color, rgb(255 255 255 / 0.5))) or
     (-webkit-text-stroke: 1px var(--text-stroke-color, rgb(255 255 255 / 0.5)))
 ) {
-
   .watermark {
     text-shadow: none;
     -webkit-text-stroke: 1px var(--text-stroke-color, rgb(255 255 255 / 0.5));
@@ -386,7 +391,6 @@ dialog::backdrop {
 }
 
 @media (width <=375px) {
-
   .header {
     padding-block: 122px;
   }
@@ -401,7 +405,7 @@ dialog::backdrop {
   }
 
   .save-dialog {
-    max-width: 340px;
+    max-width: 338px;
     padding-inline: 40px;
   }
 }

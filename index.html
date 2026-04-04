@@ -15,8 +15,7 @@
     <link rel="stylesheet" href="./styles/animations.css" />
     <link rel="stylesheet" href="./styles/style.css" />
   </head>
-
-  <body class="page block-width">
+<body class="page block-width">
     <header class="header">
       <span class="header__logo">&lt;/HTML&gt;</span>
       <h1 class="header__title">Закрывающий тег</h1>
@@ -587,8 +586,8 @@
 
         <button
           class="save__button common-button animated-button"
-          type="button"
-          onclick="window['save-dialog-id'].show()"
+          type="button"Modal
+          onclick="window['save-dialog-id'].showModal()"
           aria-controls="save-dialog-id"
         >
           <svg class="save-button__icon">
@@ -599,8 +598,8 @@
       </div>
     </main>
 
-    <dialog id="save-dialog-id block-width">
-      <div class="save-dialog">
+    <dialog id="save-dialog-id">
+      <form class="save-dialog">
         <div class="save-dialog__content">
           <svg class="save-button__icon">
             <use href="./svg/floppy.svg#disk-icon" />
@@ -614,9 +613,10 @@
         >
           <span class="button__text">ок</span>
         </button>
-      </div>
+      </form>
     </dialog>
 
     <script src="./scripts/like.js"></script>
+  
   </body>
 </html>
