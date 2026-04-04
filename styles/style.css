@@ -9,23 +9,24 @@
 ✦ button__text — для обозначения текстового элемента внутри кнопки
 
 */
+/* * {
+  outline: 1px red solid;
+} */
 
 .page {
+  margin: 0 auto;
   display: grid;
-  justify-items: center;
-  font-family: var(--main-font);
+  justify-content: center;
+  font-family: var(--main-font, 'Arial, sans-serif');
   font-size: 18px;
-  background-color: var(--background-color);
-  background-image: var(--gradient);
-  background-size: cover;
-  background-attachment: fixed;
+  background: var(--gradient) var(--background-color, #fff) fixed center / cover;
   min-inline-size: 320px;
   min-block-size: 100dvb;
-  font-variation-settings: 'wght' var(--text-font-weight);
+  font-variation-settings: 'wght' var(--text-font-weight, 410);
 }
 
 .block-width {
-  width: var(--block-width);
+  width: var(--block-width, 700);
 }
 
 .header {
@@ -35,19 +36,19 @@
   align-items: center;
   gap: 20px;
   margin-block: 98px;
-  border: 2px solid var(--accent-color);
+  border: 2px solid var(--accent-color, #000);
   padding-block: 130px;
-  font-family: var(--accent-font);
-  background-color: var(--background-color);
+  font-family: var(--accent-font, 'Arial, sans-serif');
+  background-color: var(--background-color, #fff);
 }
 
 .header__logo {
-  font-size: 65px;
+  font-size: var(--logo-font-size, 65px);
   line-height: 100%;
 }
 
 .header__title {
-  font-size: 23px;
+  font-size: var(--header-title-font-size, 23px);
   line-height: 100%;
   text-transform: uppercase;
 }
@@ -55,35 +56,39 @@
 .cards {
   display: flex;
   flex-direction: column;
-  gap: 53px;
+  gap: 50px;
   padding-block-end: 100px;
+  margin: 0 auto;
 }
 
 .card {
   display: flex;
   flex-direction: column;
-  border: 2px solid var(--accent-color);
-  background-color: var(--background-color);
+  border: 2px solid var(--accent-color, #000);
+  background-color: var(--background-color, #fff);
+  padding-bottom: 4px;
 }
 
 .card__title {
   padding-inline: 10px;
-  padding-block: 4px;
-  font-weight: var(--title-font-weight);
-  font-size: var(--text-font-size);
-  font-variation-settings: 'wght' var(--title-font-weight);
+  padding-block-start: 3px;
+  padding-block-end: 3px;
+  font-weight: var(--title-font-weight, 410);
+  font-size: var(--text-font-size, 18px);
+  font-variation-settings: 'wght' var(--title-font-weight, 410);
+  line-height: 22px;
 }
 
 .card__picture {
   position: relative;
-  border-top: 2px solid var(--accent-color);
-  border-bottom: 2px solid var(--accent-color);
-  overflow: hidden;
+  border-top: var(--border-width, 2px) solid var(--accent-color, #000);
+  border-bottom: var(--border-width, 2px) solid var(--accent-color, #000);
+  /* overflow: hidden; */
 }
 
 .card__image {
   display: block;
-  width: var(--block-width);
+  width: 100%;
   border: none;
   object-fit: cover;
   outline: none;
@@ -95,7 +100,8 @@
   flex-direction: column;
   gap: 25px;
   padding-inline: 25px;
-  padding-block: 25px;
+  padding-block-start: 25px;
+  padding-block-end: 22px;
 }
 
 .card__content-text {
@@ -108,7 +114,8 @@
   display: flex;
   flex-direction: row;
   justify-content: flex-end;
-  gap: 8px;
+  gap: 5px;
+  padding-block-start: 3px;
 }
 
 .common-button {
@@ -116,24 +123,24 @@
   border: none;
   padding: 0;
   outline: none;
-  font-family: var(--accent-font);
-  font-size: var(--accent-font-size);
+  font-family: var(--accent-font, 'Arial, sans-serif');
+  font-size: var(--accent-font-size, 14px);
   line-height: 90%;
   background: none;
-  background-color: var(--background-color);
+  background-color: var(--background-color, #fff);
   cursor: pointer;
   appearance: none;
   -webkit-appearance: none;
 }
 
 .card__icon-button {
-  border: 2px solid transparent;
+  border: var(--border-width, 2px) solid transparent;
   outline: none;
   transition: border 0.3s ease;
 }
 
 .card__icon-button:focus-visible {
-  border: 2px solid var(--accent-color);
+  border: var(--border-width, 2px) solid var(--accent-color, #000);
 }
 
 .animated-button {
@@ -142,7 +149,7 @@
 }
 
 .animated-button:focus {
-  box-shadow: 2px 2px 0 var(--accent-color);
+  box-shadow: 2px 2px 0 var(--accent-color, #000);
   outline: none;
 }
 
@@ -153,7 +160,7 @@
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: var(--accent-color);
+  background-color: var(--accent-color, #000);
   transition: transform 0.5s ease-in-out;
   transform: scaleX(0);
   transform-origin: left top;
@@ -164,14 +171,14 @@
 }
 
 .card__like-button {
-  border: 2px solid var(--accent-color);
+  border: var(--border-width, 2px) solid var(--accent-color, #000);
   min-inline-size: 130px;
 }
 
 .button__text {
   position: relative;
   z-index: 1;
-  color: var(--text-color);
+  color: var(--text-color, #fff);
   mix-blend-mode: difference;
 }
 
@@ -180,14 +187,14 @@
   align-items: center;
   gap: 8px;
   margin: 0 auto;
-  border: 2px solid var(--accent-color);
+  border: var(--border-width, 2px) solid var(--accent-color, #000);
   padding-inline: 19px;
-  padding-block: 13px;
+  padding-block: 15px;
 }
 
 .save-button__icon {
   z-index: 1;
-  fill: var(--text-color);
+  fill: var(--text-color, #fff);
   mix-blend-mode: difference;
 }
 
@@ -207,10 +214,10 @@ dialog {
   flex-direction: column;
   gap: 30px;
   width: 353px;
-  border: 2px solid var(--accent-color);
+  border: 2px solid var(--accent-color, #000);
   padding: 28px;
-  font-family: var(--accent-font);
-  font-size: var(--accent-font-size);
+  font-family: var(--accent-font, 'Arial, sans-serif');
+  font-size: var(--accent-font-size, 14px);
   line-height: 1.5;
 }
 
@@ -238,7 +245,7 @@ dialog::backdrop {
 }
 
 .save-dialog__button {
-  border: 2px solid var(--accent-color);
+  border: 2px solid var(--accent-color, #000);
   padding-inline: 22px;
   padding-block: 10px;
   text-transform: uppercase;
@@ -305,19 +312,19 @@ dialog::backdrop {
 /*hover*/
 
 .like-icon:hover .core {
-  fill: var(--accent-color);
+  fill: var(--accent-color, #000);
   transition: fill 0.3s linear;
 }
 
 .like-icon:hover .main-body {
-  fill: var(--accent-color);
+  fill: var(--accent-color, #000);
   transition: fill 0.3s 0.05s linear;
 }
 
 /*active*/
 
 .like-icon:active .core {
-  fill: var(--animation-fill-color);
+  fill: var(--animation-fill-color, #f00);
   transition: fill 0.3s linear;
 }
 
@@ -329,17 +336,17 @@ dialog::backdrop {
 /*clicked*/
 
 .like-icon.is-liked .contour {
-  fill: var(--animation-fill-color);
+  fill: var(--animation-fill-color, #f00);
   transition: fill 0.3s 0.06s linear;
 }
 
 .like-icon.is-liked .core {
-  fill: var(--animation-fill-color);
+  fill: var(--animation-fill-color, #f00);
   transition: fill 0.3s linear;
 }
 
 .like-icon.is-liked .main-body {
-  fill: var(--animation-fill-color);
+  fill: var(--animation-fill-color, #f00);
   transition: fill 0.3s 0.05s linear;
 }
 
@@ -356,45 +363,45 @@ dialog::backdrop {
   position: absolute;
   top: 25px;
   right: 25px;
-  font-family: var(--accent-font);
-  font-size: var(--accent-font-size);
+  font-family: var(--accent-font, 'Arial, sans-serif');
+  font-size: var(--accent-font-size, 14px);
   text-shadow:
-    -1px 0 var(--text-stroke-color),
-    0 1px var(--text-stroke-color),
-    1px 0 var(--text-stroke-color),
-    0 -1px var(--text-stroke-color);
+    -1px 0 var(--text-stroke-color, rgb(255 255 255 / 0.5)),
+    0 1px var(--text-stroke-color, rgb(255 255 255 / 0.5)),
+    1px 0 var(--text-stroke-color, rgb(255 255 255 / 0.5)),
+    0 -1px var(--text-stroke-color, rgb(255 255 255 / 0.5));
   mix-blend-mode: hard-light;
 }
 
 @supports (
-  (text-stroke: 1px var(--text-stroke-color)) or
-    (-webkit-text-stroke: 1px var(--text-stroke-color))
+  (text-stroke: 1px var(--text-stroke-color, rgb(255 255 255 / 0.5))) or
+    (-webkit-text-stroke: 1px var(--text-stroke-color, rgb(255 255 255 / 0.5)))
 ) {
 
   .watermark {
     text-shadow: none;
-    -webkit-text-stroke: 1px var(--text-stroke-color);
-    text-stroke: 1px var(--text-stroke-color);
+    -webkit-text-stroke: 1px var(--text-stroke-color, rgb(255 255 255 / 0.5));
+    text-stroke: 1px var(--text-stroke-color, rgb(255 255 255 / 0.5));
   }
 }
 
 @media (width <=375px) {
 
-  .header__logo {
-    font-size: 49px;
-  }
-
-  .header__title {
-    font-size: var(--accent-font-size);
-    text-transform: uppercase;
+  .header {
+    padding-block: 122px;
   }
 
   .save__button {
     flex-direction: column;
   }
 
+  .save__button .save-button__icon {
+    width: 28px;
+    height: 28px;
+  }
+
   .save-dialog {
-    width: 341px;
-    padding-inline: 38px;
+    max-width: 340px;
+    padding-inline: 40px;
   }
 }

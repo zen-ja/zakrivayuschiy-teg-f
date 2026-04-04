@@ -6,9 +6,9 @@
   --animation-fill-color: #f00;
 
   --text-stroke-color: rgb(255 255 255 / 0.5);
-  --text-color: var(--main-color);
-  --background-color: var(--main-color);
-  --contour-color: var(--accent-color);
+  --text-color: var(--main-color, #fff);
+  --background-color: var(--main-color, #fff);
+  --contour-color: var(--accent-color, #000);
 
   --main-font: 'Inter', sans-serif;
   --accent-font: 'PressStart2P', sans-serif;
@@ -35,5 +35,8 @@
     ),
     linear-gradient(to bottom, #e7e7e7 0.01%, #1a1a1a 100%);
 
-  --block-width: clamp(375px, 100%, 700px);
+  --block-width: clamp(371px, 100%, 700px);
+  --logo-font-size: clamp(2.7222rem, 2.735vw + 2.1524rem, 3.6111rem);
+  --header-title-font-size: clamp(0.7778rem, 1.5385vw + 0.4573rem, 1.2778rem);
+  --border-width: 2px;
 }
